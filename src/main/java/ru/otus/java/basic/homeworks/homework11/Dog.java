@@ -1,7 +1,7 @@
 package ru.otus.java.basic.homeworks.homework11;
 
 public class Dog extends Animal {
-    private int swimmingSpeed;
+    private double swimmingSpeed;
 
     public Dog(String name, int runningSpeed, int swimmingSpeed, int indurance) {
         this.name = name;
@@ -10,8 +10,8 @@ public class Dog extends Animal {
         this.indurance = indurance;
     }
 
-    public int swim(int distance) {
-        int time;
+    public double swim(int distance) {
+        double time;
         induranceCosts = 2;
         if (distance > 0) {
             indurance -= induranceCosts;

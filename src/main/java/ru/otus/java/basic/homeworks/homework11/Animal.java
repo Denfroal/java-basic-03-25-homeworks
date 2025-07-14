@@ -2,12 +2,12 @@ package ru.otus.java.basic.homeworks.homework11;
 
 public class Animal {
     protected String name;
-    protected int runningSpeed;
+    protected double runningSpeed;
     protected int indurance;
-    protected int induranceCosts;
+    protected double induranceCosts;
 
-    protected int run(int distance) {
-        int time;
+    protected double run(double distance) {
+        double time;
         induranceCosts = distance;
         if (distance > 0) {
             indurance -= induranceCosts;
