@@ -16,7 +16,7 @@ public class FindElement<T extends Comparable<T>> implements SearchTree<T> {
             this.right = null;
         }
     }
-    private Node<T> root;
+    private final Node<T> root;
 
     public FindElement(List<T> sortedList) {
         this.root = buildTreeFromSortedList(sortedList, 0, sortedList.size() - 1);
@@ -53,13 +53,5 @@ public class FindElement<T extends Comparable<T>> implements SearchTree<T> {
     @Override
     public List<T> getSortedList(List<T> list) {
         return list.stream().sorted().collect(Collectors.toList());
-    }
-
-    private void sortTree(Node<T> node, List<T> result) {
-        if (node != null) {
-            sortTree(node.left, result);
-            result.add(node.data);
-            sortTree(node.right, result);
-        }
     }
 }
